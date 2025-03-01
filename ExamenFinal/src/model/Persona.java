@@ -9,8 +9,8 @@ package model;
  * @author Alumno
  */
 public class Persona {
-    private String dni;
-    private String nombres;
+    protected String dni;
+    protected String nombres;
 
     public Persona(String dni, String nombres) {
         this.dni = dni;

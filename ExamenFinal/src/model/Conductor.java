@@ -8,13 +8,13 @@ package model;
  *
  * @author Alumno
  */
-public class Conductor {
+public class Conductor extends Persona{
     private String nro_lic;
-    private Persona persona;
+
 
     public Conductor(String nro_lic, Persona persona) {
+        super(persona.getDni(),persona.getNombres());
         this.nro_lic = nro_lic;
-        this.persona = persona;
     }
 
     public String getNro_lic() {
@@ -25,17 +25,11 @@ public class Conductor {
         this.nro_lic = nro_lic;
     }
 
-    public Persona getPersona() {
-        return persona;
-    }
 
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
 
     @Override
     public String toString() {
-        return "Numero de licencia(" + nro_lic + ") "+ persona;
+        return "Numero de licencia(" + nro_lic + ") "+ super.toString();
     }
      
 }
